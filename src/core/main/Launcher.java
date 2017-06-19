@@ -3,7 +3,7 @@ package main;
 import java.util.Scanner;
 
 /**
- * @author NOaN
+ * @author NOaN and sandy
  *
  */
 public class Launcher {
