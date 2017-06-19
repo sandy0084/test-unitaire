@@ -23,35 +23,37 @@ public class Launcher {
 
     
     private static void menu(Scanner scanner){
+        AsciiPrinter printer = new AsciiPrinter();
+        
         while (true) {
             System.out.println("Sélectionnez un template ASCII : ");
-            System.out.println("(1) - Big Template");
-            System.out.println("(2) - Small Template");
+            System.out.println("(1) - Small Template");
+            System.out.println("(2) - Big Template");
+            System.out.println("(3) - Exit");
 
             System.out.print("Entrez votre sélection : ");
             int selection = scanner.nextInt();
+            scanner.nextLine();
 
             if (selection == 1) {
                 System.out.print("Entrez votre texte : ");
                 String sentenceB = scanner.nextLine();
 
-                scanner.next();
-                System.out.println("Votre texte : " + sentenceB);
                 
-                scanner.next();
-                String responseB = scanner.nextLine();
-                System.out.println("Phrase en ASCII : " + responseB);
+                System.out.println("Phrase en ASCII :");
+                
+                printer.print(sentenceB, 1);
             }
             else if (selection == 2) {
                 System.out.print("Entrez votre texte : ");
                 String sentenceS = scanner.nextLine();
 
-                scanner.next();
-                System.out.println("Votre texte : " + sentenceS);
+                System.out.println("Phrase en ASCII :");
                 
-                scanner.next();
-                String responseS = scanner.nextLine();
-                System.out.println("Phrase en ASCII : " + responseS);
+                printer.print(sentenceS, 2);
+            }
+            else if (selection == 3) {
+                break;
             }
         }
     }
