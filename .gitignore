@@ -1,0 +1,8 @@
+**/.gradle/*
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
